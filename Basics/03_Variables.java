@@ -1,69 +1,45 @@
-public class VariableDemo {
-    public static void main(String[] args) {
-public class VariablesDemo {
+public class VariableNamingRules {
     public static void main(String[] args) {
 
-        // Variables
-        String name = "Govind";
+        // 1. Starts with letter
         int age = 21;
-        int a = 10;
-        int b = 20;
-        double salary = 25000.50;
-        char grade = 'A';
-        boolean pass = true;
 
-        // Print Variables
-        System.out.println("Name = " + name);
+        // 2. Starts with underscore
+        int _count = 10;
+
+        // 3. Starts with dollar sign
+        int $salary = 25000;
+
+        // 4. Digits at the end
+        int student1 = 101;
+
+        // 5. camelCase (Best Practice)
+        String firstName = "Govind";
+
+        // 6. Case Sensitive
+        int marks = 80;
+        int Marks = 90;
+        int MARKS = 100;
+
+        // Print values
         System.out.println("Age = " + age);
-        System.out.println("Salary = " + salary);
-        System.out.println("Grade = " + grade);
-        System.out.println("Pass = " + pass);
+        System.out.println("_count = " + _count);
+        System.out.println("$salary = " + $salary);
+        System.out.println("student1 = " + student1);
+        System.out.println("firstName = " + firstName);
+        System.out.println("marks = " + marks);
+        System.out.println("Marks = " + Marks);
+        System.out.println("MARKS = " + MARKS);
 
-        // Addition
-        System.out.println("Addition = " + (a + b));
+        // ===========================
+        // INVALID VARIABLE NAMES
+        // (Uncomment karoge to compile error aayega)
+        // ===========================
 
-        // Subtraction
-        System.out.println("Subtraction = " + (b - a));
-
-        // Multiplication
-        System.out.println("Multiplication = " + (a * b));
-
-        // Division
-        System.out.println("Division = " + (b / a));
-
-        // Average
-        double average = (a + b) / 2.0;
-        System.out.println("Average = " + average);
-
-        // Rectangle Area
-        int length = 10;
-        int width = 5;
-        int area = length * width;
-        System.out.println("Rectangle Area = " + area);
-
-        // Simple Interest
-        double p = 1000;
-        double r = 5;
-        double t = 2;
-        double si = (p * r * t) / 100;
-        System.out.println("Simple Interest = " + si);
-
-        // Celsius to Fahrenheit
-        double celsius = 25;
-        double fahrenheit = (celsius * 9 / 5) + 32;
-        System.out.println("Fahrenheit = " + fahrenheit);
-
-        // Swap Two Numbers
-        int x = 5;
-        int y = 10;
-        int temp = x;
-        x = y;
-        y = temp;
-
-        System.out.println("After Swap:");
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
-    }
-}
+        // int 1age = 20;          // Starts with number ❌
+        // int first name = 10;    // Space not allowed ❌
+        // int class = 5;          // Keyword not allowed ❌
+        // int age@ = 30;          // Special character not allowed ❌
+        // int student-name = 40;  // Hyphen not allowed ❌
     }
 }
