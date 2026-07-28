@@ -1,4 +1,4 @@
-public class ClassObjectDemo {
+public class ClassObject {
 
     // Class
     static class Student {
