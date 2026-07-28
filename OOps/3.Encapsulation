@@ -1,4 +1,4 @@
-public class EncapsulationDemo {
+public class Encapsulation {
 
     // Class
     static class Student {
