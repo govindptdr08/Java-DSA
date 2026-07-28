@@ -1,0 +1,87 @@
+public class EncapsulationDemo {
+
+    // Class
+    static class Student {
+
+        // Private variables = Data Hiding
+        private String name;
+        private int age;
+        private int marks;
+
+        // Constructor
+        Student(String name, int age, int marks) {
+            this.name = name;
+            setAge(age);
+            setMarks(marks);
+        }
+
+        // Getter for name
+        public String getName() {
+            return name;
+        }
+
+        // Setter for name
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        // Getter for age
+        public int getAge() {
+            return age;
+        }
+
+        // Setter for age with validation
+        public void setAge(int age) {
+            if (age > 0) {
+                this.age = age;
+            } else {
+                System.out.println("Invalid Age");
+            }
+        }
+
+        // Getter for marks
+        public int getMarks() {
+            return marks;
+        }
+
+        // Setter for marks with validation
+        public void setMarks(int marks) {
+            if (marks >= 0 && marks <= 100) {
+                this.marks = marks;
+            } else {
+                System.out.println("Invalid Marks");
+            }
+        }
+
+        // Display method
+        public void display() {
+            System.out.println("Name  = " + name);
+            System.out.println("Age   = " + age);
+            System.out.println("Marks = " + marks);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        // Object creation
+        Student s1 = new Student("Govind", 21, 85);
+
+        // Access data using Getter
+        System.out.println("Name = " + s1.getName());
+        System.out.println("Age = " + s1.getAge());
+        System.out.println("Marks = " + s1.getMarks());
+
+        // Change data using Setter
+        s1.setName("Govind Patidar");
+        s1.setAge(22);
+        s1.setMarks(90);
+
+        System.out.println("\nAfter Updating:");
+        s1.display();
+
+        // Invalid data
+        System.out.println("\nTesting Validation:");
+        s1.setAge(-5);
+        s1.setMarks(150);
+    }
+}
