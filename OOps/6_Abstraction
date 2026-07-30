@@ -1,0 +1,71 @@
+public class Abstraction {
+
+    // Abstract Class
+    static abstract class Vehicle {
+
+        String brand;
+
+        // Constructor
+        Vehicle(String brand) {
+            this.brand = brand;
+        }
+
+        // Abstract Method
+        abstract void start();
+
+        // Normal / Concrete Method
+        void stop() {
+            System.out.println(brand + " vehicle stopped");
+        }
+
+        void displayBrand() {
+            System.out.println("Brand = " + brand);
+        }
+    }
+
+    // Child Class 1
+    static class Car extends Vehicle {
+
+        Car(String brand) {
+            super(brand);
+        }
+
+        // Abstract method implementation
+        @Override
+        void start() {
+            System.out.println("Car starts with key");
+        }
+    }
+
+    // Child Class 2
+    static class Bike extends Vehicle {
+
+        Bike(String brand) {
+            super(brand);
+        }
+
+        // Abstract method implementation
+        @Override
+        void start() {
+            System.out.println("Bike starts with self-start");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        // Parent reference + Child object
+        Vehicle car = new Car("Toyota");
+
+        car.displayBrand();
+        car.start();
+        car.stop();
+
+        System.out.println();
+
+        Vehicle bike = new Bike("Honda");
+
+        bike.displayBrand();
+        bike.start();
+        bike.stop();
+    }
+}
