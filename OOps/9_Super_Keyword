@@ -1,0 +1,51 @@
+public class SuperKeyword {
+
+    // Parent Class
+    static class Person {
+
+        String name = "Parent Name";
+
+        // Parent Constructor
+        Person() {
+            System.out.println("Parent Constructor Called");
+        }
+
+        // Parent Method
+        void display() {
+            System.out.println("Parent display() Method");
+        }
+    }
+
+    // Child Class
+    static class Student extends Person {
+
+        String name = "Child Name";
+
+        // Child Constructor
+        Student() {
+            super(); // Calls Parent Constructor
+            System.out.println("Child Constructor Called");
+        }
+
+        void show() {
+
+            // Parent Variable
+            System.out.println("Parent Name = " + super.name);
+
+            // Child Variable
+            System.out.println("Child Name = " + this.name);
+
+            // Parent Method
+            super.display();
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println();
+
+        s.show();
+    }
+}
