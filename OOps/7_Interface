@@ -1,0 +1,54 @@
+public class Interface {
+
+    // Interface
+    interface Animal {
+
+        void sound();   // Abstract Method
+
+        void eat();     // Abstract Method
+    }
+
+    // Implementing Interface
+    static class Dog implements Animal {
+
+        @Override
+        public void sound() {
+            System.out.println("Dog Barks");
+        }
+
+        @Override
+        public void eat() {
+            System.out.println("Dog Eats Food");
+        }
+    }
+
+    // Another Class
+    static class Cat implements Animal {
+
+        @Override
+        public void sound() {
+            System.out.println("Cat Meows");
+        }
+
+        @Override
+        public void eat() {
+            System.out.println("Cat Drinks Milk");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        // Parent Reference
+        Animal a1 = new Dog();
+
+        a1.sound();
+        a1.eat();
+
+        System.out.println();
+
+        Animal a2 = new Cat();
+
+        a2.sound();
+        a2.eat();
+    }
+}
