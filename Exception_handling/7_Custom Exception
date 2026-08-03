@@ -1,0 +1,34 @@
+class InvalidMarksException extends Exception {
+
+    InvalidMarksException(String message) {
+
+        super(message);
+    }
+}
+
+public class CustomException {
+
+    static void checkMarks(int marks) throws InvalidMarksException {
+
+        if (marks > 100 || marks < 0) {
+
+            throw new InvalidMarksException("Invalid Marks");
+        }
+
+        System.out.println("Valid Marks");
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            checkMarks(120);
+
+        }
+
+        catch (InvalidMarksException e) {
+
+            System.out.println(e.getMessage());
+        }
+    }
+}
