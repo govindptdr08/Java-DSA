@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class LinkedHashSet {
+
+    public static void main(String[] args) {
+
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+
+        set.add("Java");
+        set.add("Python");
+        set.add("Java");
+
+        System.out.println(set);
+    }
+}
