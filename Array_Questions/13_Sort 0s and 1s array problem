@@ -1,0 +1,38 @@
+public class SortZerosOnes {
+
+    public static void main(String[] args) {
+
+        int[] arr = {0, 1, 1, 0, 1, 0, 0};
+
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+
+            // Left ko 1 milne tak aage badhao
+            while (arr[left] == 0 && left < right) {
+                left++;
+            }
+
+            // Right ko 0 milne tak peeche lao
+            while (arr[right] == 1 && left < right) {
+                right--;
+            }
+
+            // Swap
+            if (left < right) {
+                int temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+
+                left++;
+                right--;
+            }
+        }
+
+        // Print array
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
